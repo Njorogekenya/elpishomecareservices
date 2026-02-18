@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elpis Home Care Services</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--primary:#0b5d5c;
+--accent:#d4a373;
+--light:#fdf6ec;
+--dark:#2f3e46;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:'Poppins',sans-serif;
+background:var(--light);
+color:var(--dark);
+line-height:1.6;
+}
+
+nav{
+background:white;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+top:0;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+
+nav h2{color:var(--primary);font-weight:700;}
+nav ul{list-style:none;display:flex;gap:20px;}
+nav ul li a{text-decoration:none;color:var(--dark);font-weight:600;}
+
+.hero{
+min-height:100vh;
+background:linear-gradient(rgba(11,93,92,0.75),rgba(11,93,92,0.75)),
+url('https://images.pexels.com/photos/7551687/pexels-photo-7551687.jpeg?auto=compress&cs=tinysrgb&w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:0 8%;
+}
+
+.hero h1{font-size:2.8rem;margin-bottom:20px;}
+.hero p{max-width:600px;margin:auto;font-weight:300;}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:var(--accent);
+color:white;
+border-radius:30px;
+text-decoration:none;
+margin-top:20px;
+font-weight:600;
+}
+
+.section{
+padding:100px 8%;
+text-align:center;
+}
+
+.section h2{
+color:var(--primary);
+margin-bottom:20px;
+font-size:2rem;
+}
+
+.about-img{
+width:100%;
+max-width:800px;
+border-radius:15px;
+margin-top:30px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Accordion Services */
+.accordion{
+max-width:800px;
+margin:30px auto;
+text-align:left;
+}
+
+.accordion-item{
+background:white;
+margin-bottom:10px;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.accordion-header{
+padding:15px;
+cursor:pointer;
+font-weight:600;
+background:var(--primary);
+color:white;
+}
+
+.accordion-content{
+display:none;
+padding:15px;
+background:white;
+}
+
+.accordion-content img{
+width:100%;
+border-radius:10px;
+margin-top:10px;
+}
+
+/* Contact */
+.contact-links a{
+display:block;
+margin:10px 0;
+color:var(--primary);
+font-weight:600;
+text-decoration:none;
+}
+
+footer{
+background:var(--primary);
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:2rem;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Elpis Home Care</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Professional Home-Based Care Services</h1>
+<p>Delivering compassionate, personalized healthcare services across Nairobi, Kiambu & surrounding counties.</p>
+<a href="tel:0704819537" class="btn">Call Now</a>
+</div>
+</section>
+
+<section class="section" id="about">
+<h2>About Elpis</h2>
+<p><strong>Elpis</strong> means <strong>Hope</strong>. We bring hope, dignity, and professional healthcare directly to your home. Our caregivers are trained to deliver personalized and respectful care that enhances comfort and quality of life.</p>
+
+<p><strong>Service Areas:</strong> Nairobi County, Kiambu County, Machakos, Kajiado, and surrounding regions.</p>
+
+<img src="https://images.pexels.com/photos/7551612/pexels-photo-7551612.jpeg?auto=compress&cs=tinysrgb&w=1200" class="about-img" alt="Home Care Support">
+</section>
+
+<section class="section" id="services">
+<h2>Our Services (Click to View)</h2>
+
+<div class="accordion">
+
+<div class="accordion-item">
+<div class="accordion-header">Elderly Care & Companionship</div>
+<div class="accordion-content">
+<p>Daily assistance, mobility support, companionship, hygiene assistance, and emotional care.</p>
+<img src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1200">
+</div>
+</div>
+
+<div class="accordion-item">
+<div class="accordion-header">Medication Management</div>
+<div class="accordion-content">
+<p>Proper administration of prescribed medication, monitoring, and dosage tracking.</p>
+<img src="https://images.pexels.com/photos/593451/pexels-photo-593451.jpeg?auto=compress&cs=tinysrgb&w=1200">
+</div>
+</div>
+
+<div class="accordion-item">
+<div class="accordion-header">Post-Surgery & Nursing Care</div>
+<div class="accordion-content">
+<p>Wound dressing, vitals monitoring, recovery support and professional nursing supervision.</p>
+<img src="https://images.pexels.com/photos/7088483/pexels-photo-7088483.jpeg?auto=compress&cs=tinysrgb&w=1200">
+</div>
+</div>
+
+<div class="accordion-item">
+<div class="accordion-header">24/7 VVIP Home Monitoring</div>
+<div class="accordion-content">
+<p>Round-the-clock dedicated private caregiver, nurse supervision, emergency response and premium personalized care.</p>
+<img src="https://images.pexels.com/photos/7551665/pexels-photo-7551665.jpeg?auto=compress&cs=tinysrgb&w=1200">
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+<div class="contact-links">
+<a href="mailto:talktoelpis@gmail.com">📧 talktoelpis@gmail.com</a>
+<a href="tel:0704819537">📞 0704819537</a>
+</div>
+<p>We proudly serve Nairobi, Kiambu & surrounding counties.</p>
+</section>
+
+<footer>
+© 2026 Elpis Home Care Services | Bringing Hope & Compassion Home
+</footer>
+
+<script>
+const headers = document.querySelectorAll(".accordion-header");
+headers.forEach(header=>{
+header.addEventListener("click",()=>{
+const content = header.nextElementSibling;
+content.style.display = content.style.display === "block" ? "none" : "block";
+});
+});
+</script>
+
+</body>
+</html>
