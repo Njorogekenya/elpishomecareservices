@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elpis Home Care Services</title>
+<meta name="description" content="Elpis Home Care Services delivers professional, compassionate home-based healthcare services across Nairobi, Kiambu & surrounding counties.">
+<meta name="keywords" content="Home care, Elderly care, Medication management, Nursing care, Nairobi, Kiambu, Kenya, Home healthcare">
+<meta name="author" content="Elpis Home Care Services">
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -36,15 +39,14 @@ top:0;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 z-index:1000;
 }
-
-nav h2{color:var(--primary);font-weight:700;}
-nav ul{list-style:none;display:flex;gap:20px;}
-nav ul li a{text-decoration:none;color:var(--dark);font-weight:600;}
+.logo img{height:55px;width:auto;}
+nav ul{list-style:none; display:flex; gap:25px;}
+nav ul li a{text-decoration:none; color:var(--dark); font-weight:600;}
 
 .hero{
 min-height:100vh;
 background:linear-gradient(rgba(11,93,92,0.75),rgba(11,93,92,0.75)),
-url('https://images.pexels.com/photos/7551687/pexels-photo-7551687.jpeg?auto=compress&cs=tinysrgb&w=1600');
+url('https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -54,10 +56,8 @@ text-align:center;
 color:white;
 padding:0 8%;
 }
-
 .hero h1{font-size:2.8rem;margin-bottom:20px;}
-.hero p{max-width:600px;margin:auto;font-weight:300;}
-
+.hero p{max-width:650px;margin:auto;font-weight:300;}
 .btn{
 display:inline-block;
 padding:12px 25px;
@@ -73,13 +73,11 @@ font-weight:600;
 padding:100px 8%;
 text-align:center;
 }
-
 .section h2{
 color:var(--primary);
 margin-bottom:20px;
 font-size:2rem;
 }
-
 .about-img{
 width:100%;
 max-width:800px;
@@ -123,6 +121,15 @@ border-radius:10px;
 margin-top:10px;
 }
 
+/* Small Click-to-View Text */
+.click-view{
+opacity:0.85;
+font-size:1rem;
+margin-bottom:10px;
+color:var(--dark);
+font-weight:600;
+}
+
 /* Contact */
 .contact-links a{
 display:block;
@@ -132,6 +139,97 @@ font-weight:600;
 text-decoration:none;
 }
 
+/* Blog Section */
+.blog-container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+.blog-card{
+background:white;
+border-radius:10px;
+padding:15px;
+width:300px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+cursor:pointer;
+transition:0.3s;
+}
+.blog-card:hover{
+transform:scale(1.03);
+}
+.blog-card h3{
+color:var(--primary);
+margin-bottom:10px;
+}
+.blog-content{
+display:none;
+max-width:800px;
+margin:20px auto;
+text-align:left;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0 3px 15px rgba(0,0,0,0.1);
+}
+
+/* Reviews Section */
+.reviews-container{
+max-width:900px;
+margin:50px auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+text-align:left;
+}
+.review-card{
+background:white;
+border-radius:10px;
+padding:15px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+.review-card p{font-style:italic;}
+.review-card h4{margin-bottom:5px; color:var(--primary);}
+
+/* Floating WhatsApp & Email Buttons */
+.whatsapp-btn, .email-btn{
+  position:fixed;
+  bottom:20px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  z-index:1001;
+  transition:transform 0.2s;
+}
+
+.whatsapp-btn:hover, .email-btn:hover{
+  transform:scale(1.1);
+}
+
+.whatsapp-btn{
+  right:20px;
+  background:#25D366;
+}
+
+.whatsapp-btn img{
+  width:35px;
+  height:35px;
+}
+
+.email-btn{
+  right:90px;
+  background:#0072c6;
+}
+
+.email-btn img{
+  width:35px;
+  height:35px;
+}
+
 footer{
 background:var(--primary);
 color:white;
@@ -139,8 +237,20 @@ text-align:center;
 padding:30px;
 }
 
+iframe{
+width:100%;
+border:0;
+height:400px;
+border-radius:10px;
+margin-top:20px;
+}
+
 @media(max-width:768px){
 .hero h1{font-size:2rem;}
+.blog-container{
+flex-direction:column;
+align-items:center;
+}
 }
 </style>
 </head>
@@ -148,10 +258,14 @@ padding:30px;
 <body>
 
 <nav>
-<h2>Elpis Home Care</h2>
+<div class="logo">
+<img src="logo.png" alt="Elpis Home Care Services Logo">
+</div>
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#reviews">Reviews</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -166,23 +280,29 @@ padding:30px;
 
 <section class="section" id="about">
 <h2>About Elpis</h2>
-<p><strong>Elpis</strong> means <strong>Hope</strong>. We bring hope, dignity, and professional healthcare directly to your home. Our caregivers are trained to deliver personalized and respectful care that enhances comfort and quality of life.</p>
+<p><strong>Elpis</strong> means <strong>Hope</strong>. Founded in <strong>2026</strong> by <strong>Kelvin Njoroge</strong>, <strong>Maxwell Basweti</strong>, and <strong>Dennis Guchu</strong>, we bring hope, dignity, and professional healthcare directly to your home. Our caregivers are trained to deliver personalized and respectful care that enhances comfort and quality of life.</p>
+
+<p><strong>Mission:</strong> To provide compassionate, professional, and reliable home-based healthcare services that improve quality of life for our clients and support their families.</p>
+
+<p><strong>Vision:</strong> To be the leading trusted home healthcare provider across Kenya, setting the standard for excellence and care.</p>
+
+<p><strong>Our Approach:</strong> Experienced caregivers, culturally sensitive service, and modern healthcare standards ensure comfort, safety, and dignity for every client.</p>
 
 <p><strong>Service Areas:</strong> Nairobi County, Kiambu County, Machakos, Kajiado, and surrounding regions.</p>
 
-<img src="https://images.pexels.com/photos/7551612/pexels-photo-7551612.jpeg?auto=compress&cs=tinysrgb&w=1200" class="about-img" alt="Home Care Support">
+<img src="https://images.pexels.com/photos/4226137/pexels-photo-4226137.jpeg" class="about-img" alt="African nurse caring for elderly patient at home">
 </section>
 
 <section class="section" id="services">
-<h2>Our Services (Click to View)</h2>
+<h2>Our Services</h2>
+<p class="click-view">Click to view</p>
 
 <div class="accordion">
-
 <div class="accordion-item">
 <div class="accordion-header">Elderly Care & Companionship</div>
 <div class="accordion-content">
 <p>Daily assistance, mobility support, companionship, hygiene assistance, and emotional care.</p>
-<img src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<img src="https://images.pexels.com/photos/7551674/pexels-photo-7551674.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="African elderly care support">
 </div>
 </div>
 
@@ -190,7 +310,7 @@ padding:30px;
 <div class="accordion-header">Medication Management</div>
 <div class="accordion-content">
 <p>Proper administration of prescribed medication, monitoring, and dosage tracking.</p>
-<img src="https://images.pexels.com/photos/593451/pexels-photo-593451.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<img src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="African nurse administering medication">
 </div>
 </div>
 
@@ -198,7 +318,7 @@ padding:30px;
 <div class="accordion-header">Post-Surgery & Nursing Care</div>
 <div class="accordion-content">
 <p>Wound dressing, vitals monitoring, recovery support and professional nursing supervision.</p>
-<img src="https://images.pexels.com/photos/7088483/pexels-photo-7088483.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<img src="https://images.pexels.com/photos/7551611/pexels-photo-7551611.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Post surgery patient exercise">
 </div>
 </div>
 
@@ -206,10 +326,69 @@ padding:30px;
 <div class="accordion-header">24/7 VVIP Home Monitoring</div>
 <div class="accordion-content">
 <p>Round-the-clock dedicated private caregiver, nurse supervision, emergency response and premium personalized care.</p>
-<img src="https://images.pexels.com/photos/7551665/pexels-photo-7551665.jpeg?auto=compress&cs=tinysrgb&w=1200">
+<img src="https://images.pexels.com/photos/3985299/pexels-photo-3985299.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="African home care monitoring">
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="blog">
+<h2>Our Blog</h2>
+<div class="blog-container">
+<div class="blog-card" data-target="blog1">
+<h3>Importance of Elderly Care at Home</h3>
+<p>Learn why personalized home care improves quality of life for seniors...</p>
+</div>
+<div class="blog-card" data-target="blog2">
+<h3>Managing Medication Safely</h3>
+<p>Tips and practices for medication management in home care settings...</p>
+</div>
+<div class="blog-card" data-target="blog3">
+<h3>Post-Surgery Home Care</h3>
+<p>How professional nursing support speeds up recovery...</p>
+</div>
+<div class="blog-card" data-target="blog4">
+<h3>24/7 Home Monitoring Benefits</h3>
+<p>How round-the-clock care ensures safety and peace of mind...</p>
 </div>
 </div>
 
+<div id="blog1" class="blog-content">
+<h3>Importance of Elderly Care at Home</h3>
+<p>Providing care in the comfort of the home allows seniors to maintain independence, feel safer, and receive personalized attention from trained caregivers. Home care also supports families, reducing stress and ensuring professional supervision of daily activities, hygiene, and emotional support.</p>
+</div>
+
+<div id="blog2" class="blog-content">
+<h3>Managing Medication Safely</h3>
+<p>Proper medication management at home is critical for health and recovery. Our caregivers ensure medications are administered on time, track dosages, monitor reactions, and communicate with healthcare providers to prevent errors and complications.</p>
+</div>
+
+<div id="blog3" class="blog-content">
+<h3>Post-Surgery Home Care</h3>
+<p>Our post-operative nursing care focuses on wound management, vital signs monitoring, and rehabilitation exercises to speed recovery and prevent complications.</p>
+</div>
+
+<div id="blog4" class="blog-content">
+<h3>24/7 Home Monitoring Benefits</h3>
+<p>Round-the-clock supervision, nurse alerts, and emergency response ensure safety, peace of mind, and immediate support when needed.</p>
+</div>
+</section>
+
+<section class="section" id="reviews">
+<h2>Client Reviews</h2>
+<div class="reviews-container">
+<div class="review-card">
+<h4>Jane K., Nairobi</h4>
+<p>"Elpis Home Care has been amazing. My father receives excellent care, and the staff are compassionate and professional."</p>
+</div>
+<div class="review-card">
+<h4>Michael B., Kiambu</h4>
+<p>"Their medication management service is reliable and efficient. I trust them completely with my mother's health."</p>
+</div>
+<div class="review-card">
+<h4>Sarah M., Machakos</h4>
+<p>"Highly recommend Elpis! The caregivers are friendly, trained, and always on time."</p>
+</div>
 </div>
 </section>
 
@@ -220,6 +399,19 @@ padding:30px;
 <a href="tel:0704819537">📞 0704819537</a>
 </div>
 <p>We proudly serve Nairobi, Kiambu & surrounding counties.</p>
+
+<!-- Google Maps Embed -->
+<h3>Our Location</h3>
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.674135372667!2d36.821946515239045!3d-1.2920652363511558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172f1c42e87%3A0x8d58c23b3f4b7fbb!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1600000000000" allowfullscreen></iframe>
+
+<!-- Floating WhatsApp & Email -->
+<a href="https://wa.me/254704819537" target="_blank" class="whatsapp-btn">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+<a href="mailto:talktoelpis@gmail.com" class="email-btn">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" />
+</a>
 </section>
 
 <footer>
@@ -227,6 +419,7 @@ padding:30px;
 </footer>
 
 <script>
+/* Accordion */
 const headers = document.querySelectorAll(".accordion-header");
 headers.forEach(header=>{
 header.addEventListener("click",()=>{
@@ -234,8 +427,18 @@ const content = header.nextElementSibling;
 content.style.display = content.style.display === "block" ? "none" : "block";
 });
 });
+
+/* Blog clickable cards */
+const blogCards = document.querySelectorAll(".blog-card");
+blogCards.forEach(card=>{
+  card.addEventListener("click", ()=>{
+    const targetId = card.getAttribute("data-target");
+    document.querySelectorAll(".blog-content").forEach(c=>c.style.display="none");
+    document.getElementById(targetId).style.display="block";
+    window.scrollTo({ top: document.getElementById(targetId).offsetTop - 80, behavior: 'smooth'});
+  });
+});
 </script>
 
 </body>
 </html>
-
